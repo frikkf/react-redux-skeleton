@@ -1,0 +1,4 @@
+export const FETCH_USERS = 'FETCH_USERS';
+export const FETCH_USERS_FULLFILLED = 'FETCH_USERS_FULLFILLED';
+export const REMOVE_USER = 'REMOVE_USER';
+export const ADD_USER = 'ADD_USER';
