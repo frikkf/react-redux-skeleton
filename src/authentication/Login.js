@@ -13,7 +13,7 @@ class Login extends Component {
                 <h1>Login Component</h1>
                 <LoginForm onSubmit={this.props.onLogin}/>
                 {this.props.isLoggedIn
-                ? <Redirect to='/counter' />
+                ? <Redirect to={this.props.redirect.pathname} />
                 : <p>Is Not Logged In</p>}
             </div>
         );

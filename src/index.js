@@ -8,11 +8,11 @@ import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 //import 'bootstrap/dist/css/bootstrap.css';
 
-import Store from './store/store';
+
 import Root from './Root';
 
 /* Initialize root React.Component provided with the store. */
-ReactDOM.render(<Root store={Store} />,
+ReactDOM.render(<Root />,
   document.getElementById('root')
 )
 

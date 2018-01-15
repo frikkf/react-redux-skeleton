@@ -1,14 +1,16 @@
 import React from 'react'
 import { Provider } from 'react-redux'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { ConnectedRouter, routerReducer, routerMiddleware, push } from 'react-router-redux'
+import * as mainStore from './store/store';
 import App from './App'
 
-const Root = ({ store }) => (
-  <Provider store={store}>
-    <Router>
-      <Route path="/:filter?" component={App} />
-    </Router>
-  </Provider>
+const Root = () => (
+    <Provider store={mainStore.store}>
+        <ConnectedRouter history={mainStore.history} >
+            <App />
+        </ConnectedRouter>
+    </Provider>
 )
 
 

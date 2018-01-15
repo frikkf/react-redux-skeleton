@@ -2,7 +2,7 @@ import { combineEpics } from 'redux-observable';
 
 import {incrementEpic,decrementEpic,storeResultEpic} from '../counter/Counter/epics';
 import {epics} from '../users/index';
-import * as login from '../login/index';
+import * as login from '../authentication/index';
 
 export const rootEpics = combineEpics(
     incrementEpic, 

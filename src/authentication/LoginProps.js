@@ -2,8 +2,10 @@
 import {login} from './actions';
 
 export const props = state => {
+    console.log("LOGINSTATE",state);
     return {
-        isLoggedIn: state.login.isLoggedIn
+        isLoggedIn: state.login.isLoggedIn,
+        redirect: state.routing.location.state.from
     };
 }
 

@@ -19,6 +19,5 @@ export const history = createHistory()
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 /* Create the store with ReduxDebugging(componseEnhancers) and middleware(observable) */
-const store = createStore(rootReducers, composeEnhancers(applyMiddleware(epicMiddleware,routingMiddleware)));
+export const store = createStore(rootReducers, composeEnhancers(applyMiddleware(epicMiddleware,routingMiddleware)));
 
-export default store;
